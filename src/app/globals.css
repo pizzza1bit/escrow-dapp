@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+.wallet-adapter-button-trigger {
+  background: rgb(100, 26, 230) !important;
+  border-radius: 8px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+.wallet-adapter-dropdown-list,
+.wallet-adapter-button {
+  font-family: inherit !important;
+}
+
+/* React-Select Control Box (Input Area) */
+.react-select__control {
+  @apply border-gray-950 cursor-pointer !bg-base-100 h-[46px] !input-primary text-white; /* Dark-themed input */
+}
+
+.react-select__single-value {
+  @apply !text-[#BFBCF6]; /* Selected value text color */
+}
+
+.react-select__menu {
+  @apply !bg-base-100 !border-gray-200 border-opacity-50 !border; /* Dark-themed dropdown */
+}
+
+/* Options */
+.react-select__option {
+  @apply !text-[#BFBCF6] cursor-pointer rounded-md px-2 py-1 !bg-base-100; /* Default option styles */
+}
+
+.react-select__option--is-selected {
+  @apply !bg-gray-950 text-white font-bold; /* Blue background for selected */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}

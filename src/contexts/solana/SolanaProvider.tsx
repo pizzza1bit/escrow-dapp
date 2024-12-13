@@ -12,7 +12,7 @@ import {
 } from '@solana/wallet-adapter-react'
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
 import { ReactNode, useCallback, useMemo } from 'react'
-import { useCluster } from '@/contexts/cluster/ClusterProvider'
+import { useCluster } from '../cluster/ClusterProvider'
 
 require('@solana/wallet-adapter-react-ui/styles.css')
 
