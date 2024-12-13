@@ -2,6 +2,7 @@
 
 import { EscrowCard } from "@/components";
 import { useDynamicEscrowProgram } from "@/hooks/queries";
+import { getAmount } from "@/utils/functions";
 
 export default function Home() {
   const { accounts, getProgramAccount } = useDynamicEscrowProgram();
@@ -33,8 +34,14 @@ export default function Home() {
               initializer={account.account.initializer}
               mintA={account.account.mintA}
               mintB={account.account.mintB}
-              initializerAmount={account.account.initializerAmount.toString()}
-              takerAmount={account.account.takerAmount.toString()}
+              initializerAmount={getAmount(
+                account.account.mintA.toBase58(),
+                account.account.initializerAmount
+              )}
+              takerAmount={getAmount(
+                account.account.mintB.toBase58(),
+                account.account.takerAmount
+              )}
             />
           ))}
         </div>

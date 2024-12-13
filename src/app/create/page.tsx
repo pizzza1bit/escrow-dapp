@@ -66,8 +66,10 @@ export default function Create() {
                     initializer: publicKey,
                     mintA,
                     mintB,
-                    initializerAmount: Number(initializerAmount),
-                    takerAmount: Number(takerAmount),
+                    initializerAmount:
+                      Number(initializerAmount) * Math.pow(10, tokenA.decimal),
+                    takerAmount:
+                      Number(takerAmount) * Math.pow(10, tokenB.decimal),
                   });
                 }}
                 disabled={initialize.isPending}

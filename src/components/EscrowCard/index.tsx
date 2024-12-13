@@ -38,6 +38,7 @@ export default function EscrowCard({
           </div>
           <div className="flex flex-row gap-4 w-full justify-between">
             <span className="text-start flex-1">Send Amount</span>
+            <span className="">{initializerAmount}</span>
             <Image
               unoptimized
               src={getTokenLogo(mintA.toString())}
@@ -45,10 +46,10 @@ export default function EscrowCard({
               width={30}
               height={30}
             />
-            <span className="">{initializerAmount}</span>
           </div>
           <div className="flex flex-row gap-4 w-full justify-between">
             <span className="text-start flex-1">Receive Amount</span>
+            <span className="">{takerAmount}</span>
             <Image
               unoptimized
               src={getTokenLogo(mintB.toString())}
@@ -56,7 +57,6 @@ export default function EscrowCard({
               width={30}
               height={30}
             />
-            <span className="">{takerAmount}</span>
           </div>
         </div>
         {!!publicKey ? (

@@ -177,7 +177,7 @@ export function useDynamicEscrowProgramAccount({
     },
     onSuccess: (tx) => {
       transactionToast(tx);
-      return accountQuery.refetch();
+      return accounts.refetch();
     },
   });
 
